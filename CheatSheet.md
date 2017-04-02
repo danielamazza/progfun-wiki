@@ -15,8 +15,11 @@ There are certainly a lot of things that can be improved! If you would like to c
 
 ## Evaluation Rules
 
-- Call by value: evaluates the function arguments before calling the function
-- Call by name: evaluates the function first, and then evaluates the arguments if need be
+- Call By Value (CBV, chiamata per valore): calcola gli argomenti prima della funzione. 
+Vantaggio: gli argomenti sono calcolati una sola volta. 
+Ad esempio, se def: square(x: Int) =  x * x, allora square(3+2) calcola per prima cosa il valore dell'argomento: 3+2 = 5 e lo fa una sola volta, poi calcola la funzione: 5*5. Usando la CBN, invece, prima si sostituisce la funzione, quindi il primo passo è (3+2) * (3+2), e quindi si calcola 3+2 per due volte.
+- Call By Name (CBN, chiamata per nome): calcola la funzione prima degli argomenti (e calcola gli argomenti solo se serve). Vantaggio: gli argomenti non sono calcolati se non servono. 
+Ad esempio, se def test(x: Int, y: Int) = x * x, allora y non viene calcolato, quindi è molto più veloce se y è complicato e non dà problemi se y è un loop.
 
 <!-- code -->
 ```scala
