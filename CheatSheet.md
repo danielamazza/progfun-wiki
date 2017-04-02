@@ -34,6 +34,15 @@ Si possono usare insieme anche i due diversi tipi di call, come in questo esempi
     def square(x: => Double) // call by name
     def myFct(bindings: Int*) = { ... } // bindings is a sequence of int, containing a varying # of arguments
 ```
+## Conditionals and Value definitions
+
+Esempio di espressione condizionale if-else:
+
+
+```scala
+    if (Boolean) condition1 else condition2 
+```
+
 
 ## Higher order functions
 
