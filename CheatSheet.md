@@ -21,6 +21,9 @@ Ad esempio, se def: square(x: Int) =  x * x, allora square(3+2) calcola per prim
 - Call By Name (CBN, chiamata per nome): calcola la funzione prima degli argomenti (e calcola gli argomenti solo se serve). Vantaggio: gli argomenti non sono calcolati se non servono. 
 Ad esempio, se def test(x: Int, y: Int) = x * x, allora y non viene calcolato, quindi è molto più veloce se y è complicato e non dà problemi se y è un loop.
 
+In Scala viene usato per default il CBV (quindi viene prima calcolato il valore degli argomenti). Si può fare la CBN usando il => (vedi esempi) 
+Si possono usare insieme anche i due diversi tipi di call, come in questo esempio: def constOne(x: Int,y: => Int) = x. 
+
 <!-- code -->
 ```scala
     def example = 2      // evaluated when called
